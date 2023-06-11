@@ -1,16 +1,46 @@
-
 [project]
-name = ""
-version = ""
-description = ""
+name = "Test html parsing"
+version = "0.0.1"
+description = "Test html parsing"
 authors = [
     {name = "Chebotarev Victor", email = "powersemmi@gmail.com"},
 ]
 dependencies = [
-    "jmespath>=1.0.1",
-    "beautifulsoup4>=4.12.2",
-    "lxml>=4.9.2",
-    "xmltodict>=0.13.0",
+    "jmespath==1.0.1",
+    "beautifulsoup4==4.12.2",
+    "lxml==4.9.2",
+    "xmltodict==0.13.0",
 ]
 requires-python = ">=3.11"
 license = {text = "MIT"}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "isort>=5.12.0",
+    "black>=23.3.0",
+    "flake8-pyproject>=1.2.3",
+]
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.flake8]
+ignore = ["W291", "E203", "W503", "E731"]
+exclude = [
+    ".git",
+    "__pycashe__",
+    "docs",
+    "build",
+    "dist",
+    ".venv",
+    "__pypackeges__"
+]
+max-line-length = 79
+count = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
