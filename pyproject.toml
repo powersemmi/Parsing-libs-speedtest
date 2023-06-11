@@ -1,0 +1,16 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Chebotarev Victor", email = "powersemmi@gmail.com"},
+]
+dependencies = [
+    "jmespath>=1.0.1",
+    "beautifulsoup4>=4.12.2",
+    "lxml>=4.9.2",
+    "xmltodict>=0.13.0",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
